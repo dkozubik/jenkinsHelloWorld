@@ -4,8 +4,13 @@
 import java.util.concurrent.TimeUnit;
 
 public class HelloWorld {
-  public static void main(String[] args) {
-    TimeUnit.SECONDS.sleep(30);
-    System.out.println("Hello, World");
-  }
+	public static void main(String[] args) {
+	    try {
+            Thread.sleep(20000);
+        }
+        catch(InterruptedException ex)  {
+            Thread.currentThread().interrupt();
+        }
+		System.out.println("Hello World");
+	}
 }
